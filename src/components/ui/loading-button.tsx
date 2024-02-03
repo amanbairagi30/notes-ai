@@ -12,7 +12,7 @@ export default function LoadingButton({
   return (
     <>  
       <Button className="mt-4" {...props} disabled={props.disabled || loading}>
-        {loading && "loading"}
+        {loading && "Working on It"}
         {children}
       </Button>
     </>

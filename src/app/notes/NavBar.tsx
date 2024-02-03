@@ -7,11 +7,12 @@ import logo from "../../../public/next.svg"
 import { UserButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { PlusIcon } from '@radix-ui/react-icons'
-import AddNoteDialog from '@/components/AddNoteDialog'
+import AddEditNoteDialog from '@/components/AddEditNoteDialog'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function NavBar() {
 
-    const [showAddNoteDialog, setShowAddNoteDialog] = useState(false);
+    const [showAddEditNoteDialog, setShowAddEditNoteDialog] = useState(false);
     return (
         <>
             <div className='p-4  shadow'>
@@ -21,10 +22,11 @@ export default function NavBar() {
                     </Link>
 
                     <div className='flex items-center gap-4'>
-                        <Button className='flex gap-2' onClick={() => setShowAddNoteDialog(true)}>
+                        <Button className='flex gap-2' onClick={() => setShowAddEditNoteDialog(true)}>
                             <PlusIcon />
                             Add note
                         </Button>
+                        <ThemeToggle />
                         <UserButton
                             afterSignOutUrl='/'
                             appearance={{
@@ -35,7 +37,7 @@ export default function NavBar() {
                 </div>
 
             </div>
-            <AddNoteDialog open={showAddNoteDialog} setOpen={setShowAddNoteDialog} />
+            <AddEditNoteDialog open={showAddEditNoteDialog} setOpen={setShowAddEditNoteDialog} />
         </>
     )
 }
