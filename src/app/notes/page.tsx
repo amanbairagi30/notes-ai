@@ -25,14 +25,11 @@ export default async function NotesPage() {
             <Note note={item} key={index} />
           </>
         )
-      }) 
-    :
-    <Card className='col-span-full h-[5rem] flex items-center justify-center'>
-    Your Note is not here
-    </Card>}
-
-
-      
+      })
+        :
+        <Card className='col-span-full h-[5rem] flex items-center justify-center'>
+          Your Note is not here
+        </Card>}
     </div>
   )
 }
