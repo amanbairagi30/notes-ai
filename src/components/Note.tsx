@@ -20,13 +20,13 @@ export default function Note({ note }: NoteProps) {
 
     return (
         <>
-            <Card onClick={() => setShowEditNoteDialog(true)} className='cursor-pointer hover:shadow-lg transition-shadow'>
-                <CardHeader className='font-bold'>{note.title}</CardHeader>
+            <Card onClick={() => setShowEditNoteDialog(true)} className='cursor-pointer hover:bg-[#202020] hover:transition-all duration-300 hover:text-white hover:shadow-lg transition-shadow'>
+                <CardHeader className='font-bold text-2xl'>{note.title}</CardHeader>
                 <CardDescription className='px-6 pb-2'>
                     {createdUpdatedAtTimeStamp}
                     {wasUpdated && " (Edited)"}
                 </CardDescription>
-                <CardContent >
+                <CardContent>
                     <p>{note.content}</p>
                 </CardContent>
             </Card>

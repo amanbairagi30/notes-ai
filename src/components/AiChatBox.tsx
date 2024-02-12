@@ -38,7 +38,7 @@ export default function AiChatBox({ open, OnClose }: AiChatBoxProps) {
     <div className={cn("z-10 w-full max-w-[500px] max-h-[32rem]  p-1 xl-right-36", open ? "fixed bottom-0 right-0 " : "hidden")}>
 
       <div className='shadow-xl flex flex-col gap-4 h-[450px] md:h-[480px] border-[1.2px] rounded-xl bg-white dark:bg-[#202020] border-black '>
-        <div className='border-b bg-primary text-white dark:text-black border-black rounded-t-xl h-[4rem] flex gap-1 items-center justify-center px-2'>
+        <div className='border-b bg-primary text-white dark:text-black border-black rounded-t-xl h-[6rem] md:h-[4rem] flex gap-1 items-center justify-center px-2'>
           Chat with <span className='font-bold'>NotesAI</span>
         </div>
         <div className="h-full overflow-y-auto p-4" ref={scrollRef}>
